@@ -1,0 +1,55 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Calculator" verbose="1" parallel="methods" thread-count="4">
+    <groups>
+        <run>
+            <exclude name="trigonometry"/>
+        </run>
+    </groups>
+    <test name="SumTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.SumTest"/>
+        </classes>
+    </test>
+    <test name="SubtractionTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.SubtractionTest"/>
+        </classes>
+    </test>
+    <test name="MultiplicationTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.MultiplicationTest"/>
+        </classes>
+    </test>
+    <test name="DivisionTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.DivisionTest"/>
+        </classes>
+    </test>
+    <test name="ExponentiationTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.ExponentiationTest"/>
+        </classes>
+    </test>
+    <test name="SquareRootTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.SquareRootTest"/>
+        </classes>
+    </test>
+    <test name="TrigonometryTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.TrigonometryTest"/>
+        </classes>
+    </test>
+    <test name="IsPositiveTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.IsPositiveTest"/>
+        </classes>
+    </test>
+    <test name="IsNegativeTest">
+        <classes>
+            <class name="com.rntgroup.tat.unittest.IsNegativeTest"/>
+        </classes>
+    </test>
+
+</suite>
