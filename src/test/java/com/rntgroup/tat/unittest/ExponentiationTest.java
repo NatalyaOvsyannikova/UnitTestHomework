@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class ExponentiationTest extends CalculatorTest{
+public class ExponentiationTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "powDataProvider")
     @Parameters({"a", "b", "expected"})

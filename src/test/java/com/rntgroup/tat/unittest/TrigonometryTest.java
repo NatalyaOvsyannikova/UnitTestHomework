@@ -6,7 +6,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-public class TrigonometryTest extends CalculatorTest{
+public class TrigonometryTest extends BaseCalculatorTest {
 
     @Test(groups = "trigonometry", dataProvider = "sinDataProvider")
     @Parameters({"a"})

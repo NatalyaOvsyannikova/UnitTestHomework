@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SubtractionTest extends CalculatorTest{
+public class SubtractionTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "subDataProvider")
     @Parameters({"a", "b", "expected"})
@@ -18,7 +18,8 @@ public class SubtractionTest extends CalculatorTest{
     public static Object[][] subDataProvider() {
         return new Object[][]{
                 {1, 1, 0},
-                {5, 10, -5}
+                {5, 10, -5},
+                {3, -5, 8}
         };
     }
 

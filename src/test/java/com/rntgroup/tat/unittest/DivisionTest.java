@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class DivisionTest extends CalculatorTest{
+public class DivisionTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "divDataProvider")
     @Parameters({"a", "b", "expected"})

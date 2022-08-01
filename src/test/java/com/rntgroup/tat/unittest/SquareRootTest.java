@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SquareRootTest extends CalculatorTest{
+public class SquareRootTest extends BaseCalculatorTest {
 
     @Test(expectedExceptions = NumberFormatException.class)
     public void testSqrtNegative() {

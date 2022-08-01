@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class SumTest extends CalculatorTest{
+public class SumTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "sumDataProvider")
     @Parameters({"a", "b", "expected"})
@@ -18,7 +18,8 @@ public class SumTest extends CalculatorTest{
     public static Object[][] sumDataProvider() {
         return new Object[][]{
                 {1, 1, 2},
-                {0, 0, 0}
+                {0, 0, 0},
+                {10, -2, 8}
         };
     }
 }

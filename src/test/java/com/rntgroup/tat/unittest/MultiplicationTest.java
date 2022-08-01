@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class MultiplicationTest extends CalculatorTest{
+public class MultiplicationTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "multDataProvider")
     @Parameters({"a", "b", "expected"})
@@ -18,7 +18,9 @@ public class MultiplicationTest extends CalculatorTest{
     public static Object[][] multDataProvider() {
         return new Object[][]{
                 {42, 1.5, 63},
-                {-15, 2, -30}
+                {-15, 2, -30},
+                {-2, -5, 10},
+                {14, 0, 0}
         };
     }
 

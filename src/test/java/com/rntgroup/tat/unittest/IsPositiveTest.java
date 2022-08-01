@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class IsPositiveTest extends CalculatorTest{
+public class IsPositiveTest extends BaseCalculatorTest {
 
     @Test(groups = "additional", dataProvider = "positiveDataProvider")
     @Parameters({"a"})

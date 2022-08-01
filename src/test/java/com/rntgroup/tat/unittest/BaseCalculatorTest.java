@@ -5,10 +5,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 
-public class CalculatorTest {
+public abstract class BaseCalculatorTest {
     protected Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass (alwaysRun = true)
     public void setUp() {
         calculator = new Calculator();
         System.out.println("Before class");
@@ -20,7 +20,7 @@ public class CalculatorTest {
     }
 
     @BeforeGroups(value = {"trigonometry"})
-    public void BeforeGroup() {
+    public void beforeGroup() {
         System.out.println("Trigonometry");
     }
 
