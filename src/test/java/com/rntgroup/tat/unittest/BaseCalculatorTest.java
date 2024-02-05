@@ -17,6 +17,7 @@ public abstract class BaseCalculatorTest {
     @AfterClass
     public void afterClass() {
         System.out.println("After class");
+        calculator = null;
     }
 
     @BeforeGroups(value = {"trigonometry"})

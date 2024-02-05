@@ -15,7 +15,7 @@ public class MyTestListener implements IInvokedMethodListener {
 
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        System.out.println("method finished [" + testResult.getStatus() + "]: " + method.getTestMethod().getMethodName() + "\n");
+        System.out.println("method finished [" + testResult.isSuccess() + "]: " + method.getTestMethod().getMethodName() + "\n");
     }
 
 }

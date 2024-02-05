@@ -8,15 +8,15 @@ import org.testng.annotations.Test;
 public class ExponentiationTest extends BaseCalculatorTest {
 
     @Test(dataProvider = "powDataProvider")
-    @Parameters({"a", "b", "expected"})
     public void testPow(double a, double b, double expected) {
         double pow = calculator.pow(a, b);
         Assert.assertEquals(pow, expected);
     }
 
     @Test(expectedExceptions = NumberFormatException.class)
-    public void testPowNegative() {
-        calculator.pow(-10, 0.5);
+    @Parameters ({"a", "b"})
+    public void testPowNegative(double a, double b) {
+        calculator.pow(a, b);
     }
 
     @DataProvider(name = "powDataProvider")

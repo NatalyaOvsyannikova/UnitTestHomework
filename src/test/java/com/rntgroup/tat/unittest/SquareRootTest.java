@@ -2,7 +2,6 @@ package com.rntgroup.tat.unittest;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class SquareRootTest extends BaseCalculatorTest {
@@ -13,7 +12,6 @@ public class SquareRootTest extends BaseCalculatorTest {
     }
 
     @Test(dataProvider = "sqrtDataProvider")
-    @Parameters({"a","expected"})
     public void testSqrt(double a, double expected) {
         double sqrt = calculator.sqrt(a);
         Assert.assertEquals(sqrt, expected);

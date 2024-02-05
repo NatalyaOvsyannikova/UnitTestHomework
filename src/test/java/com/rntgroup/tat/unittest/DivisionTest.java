@@ -2,19 +2,17 @@ package com.rntgroup.tat.unittest;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DivisionTest extends BaseCalculatorTest {
 
-    @Test(dataProvider = "divDataProvider")
-    @Parameters({"a", "b", "expected"})
+    @Test(priority = 2, dataProvider = "divDataProvider")
     public void testDiv(double a, double b, double expected) {
         double div = calculator.div(a, b);
         Assert.assertEquals(div, expected);
     }
 
-    @Test(expectedExceptions = NumberFormatException.class)
+    @Test(priority = 1, expectedExceptions = NumberFormatException.class)
     public void testDivByZero() {
         calculator.div(1, 0);
     }

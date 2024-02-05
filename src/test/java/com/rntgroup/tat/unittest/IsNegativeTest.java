@@ -2,13 +2,11 @@ package com.rntgroup.tat.unittest;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class IsNegativeTest extends BaseCalculatorTest {
 
     @Test(groups = "additional", dataProvider = "negativeDataProvider")
-    @Parameters({"a"})
     public void testNegative(long a, boolean expected) {
         Assert.assertEquals(calculator.isNegative(a), expected);
     }
